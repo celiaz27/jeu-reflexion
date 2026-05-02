@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Niveau</title>
+
+    <style>
+        body{
+            text-align:center;
+            font-family:Arial;
+            background-image:url('images/fond.jpg');
+            background-size:cover;
+            background-position:center;
+            height:100vh;
+            margin:0;
+            color:white;
+            padding-top:100px;
+        }
+
+        h1{
+            font-size:50px;
+            text-shadow:2px 2px 8px black;
+        }
+
+        h2{
+            font-size:30px;
+            text-shadow:2px 2px 8px black;
+        }
+
+        a{
+            display:inline-block;
+            margin:15px;
+            padding:15px 35px;
+            background:#ff00cc;
+            color:white;
+            text-decoration:none;
+            border-radius:12px;
+            font-weight:bold;
+            font-size:22px;
+        }
+
+        a:hover{
+            background:#cc0099;
+        }
+    </style>
+
+</head>
+<body>
+
+<h1>Bienvenue <span th:text="${nom}"></span> 🎮</h1>
+
+<h2>Choisissez votre niveau</h2>
+
+<!-- ✅ CORRIGÉ -->
+<a href="play?level=easy">Facile</a>
+<a href="play?level=medium">Moyen</a>
+<a href="play?level=hard">Difficile</a>
+
+<br><br>
+
+<!-- ✅ CORRIGÉ -->
+<a href="load"
+   style="background:black;border:2px solid #ff00cc;">
+    REPRENDRE PARTIE ▶️
+</a>
+
+</body>
+</html>

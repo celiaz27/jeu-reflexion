@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Classement</title>
+
+  <style>
+    body{
+      text-align:center;
+      background:black;
+      color:white;
+      font-family:Arial;
+      padding-top:50px;
+    }
+
+    h1{
+      color:#ff00cc;
+      font-size:55px;
+      text-shadow:0 0 15px #ff00cc;
+    }
+
+    table{
+      margin:auto;
+      border-collapse:collapse;
+      width:60%;
+    }
+
+    th,td{
+      border:1px solid #ff00cc;
+      padding:15px;
+      font-size:22px;
+    }
+
+    th{
+      background:#ff00cc;
+      color:black;
+    }
+
+    a{
+      display:inline-block;
+      margin-top:30px;
+      padding:15px 30px;
+      background:#ff00cc;
+      color:white;
+      text-decoration:none;
+      border-radius:10px;
+    }
+  </style>
+
+</head>
+<body>
+
+<h1>🏆 TOP SCORES</h1>
+
+<table>
+  <tr>
+    <th>Nom</th>
+    <th>Score</th>
+  </tr>
+
+  <tr th:each="p : ${players}">
+    <td th:text="${p.nom}"></td>
+    <td th:text="${p.score}"></td>
+  </tr>
+
+</table>
+
+<!-- ✅ CORRIGÉ -->
+<a th:href="@{/}">Retour</a>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Jeu</title>
+
+    <style>
+        body{
+            text-align:center;
+            font-family:Arial;
+            background-image:url('images/fond.jpg');
+            background-size:cover;
+            background-position:center;
+            height:100vh;
+            margin:0;
+            color:white;
+            padding-top:100px;
+        }
+
+        h1{
+            font-size:50px;
+            text-shadow:2px 2px 8px black;
+        }
+    </style>
+
+</head>
+<body>
+
+<h1>Jeu de Réflexion 🎮</h1>
+
+<form action="player" method="post">
+
+    <input type="text" name="nom" placeholder="Entrez votre nom" required
+           style="padding:15px;font-size:20px;border-radius:10px;border:none;">
+
+    <br><br>
+
+    <button type="submit"
+            style="padding:15px 30px;font-size:20px;border:none;border-radius:10px;background:#ff00cc;color:white;">
+        COMMENCER
+    </button>
+
+</form>
+
+</body>
+</html>
